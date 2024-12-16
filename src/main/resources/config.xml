@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="crudService" class="edu.miu.cs.cs544.najeeb.midterm.service.CRUD_Service">
+        <constructor-arg value="midterm"/>
+    </bean>
+
+    <bean id="fairfield" class="edu.miu.cs.cs544.najeeb.midterm.entity.Address">
+        <constructor-arg value="1000 N 4TH Street"/>
+        <constructor-arg value="Fairfield"/>
+        <constructor-arg value="Iowa"/>
+        <constructor-arg value="52556"/>
+    </bean>
+    <bean id="miami" class="edu.miu.cs.cs544.najeeb.midterm.entity.Address">
+        <constructor-arg value="1016 W Flagler St"/>
+        <constructor-arg value="Miami"/>
+        <constructor-arg value="Florida"/>
+        <constructor-arg value="33130"/>
+    </bean>
+
+    <bean id="najeeb" class="edu.miu.cs.cs544.najeeb.midterm.entity.Faculty">
+        <constructor-arg value="Najeeb"/>
+        <constructor-arg value="cs"/>
+        <constructor-arg ref="fairfield"/>
+    </bean>
+    <bean id="muhyieddin" class="edu.miu.cs.cs544.najeeb.midterm.entity.Faculty">
+        <constructor-arg value="Muhyieddin"/>
+        <constructor-arg value="cs"/>
+        <constructor-arg ref="miami"/>
+    </bean>
+
+    <bean id="cs544" class="edu.miu.cs.cs544.najeeb.midterm.entity.Course">
+        <constructor-arg value="EA"/>
+        <constructor-arg value="544"/>
+        <constructor-arg value="25"/>
+        <constructor-arg ref="najeeb"/>
+    </bean>
+    <bean id="cs545" class="edu.miu.cs.cs544.najeeb.midterm.entity.Course">
+        <constructor-arg value="WAA"/>
+        <constructor-arg value="545"/>
+        <constructor-arg value="20"/>
+        <constructor-arg ref="muhyieddin"/>
+    </bean>
+
+    <bean id="jack" class="edu.miu.cs.cs544.najeeb.midterm.entity.Student">
+        <constructor-arg value="Jack"/>
+        <constructor-arg value="30"/>
+    </bean>
+    <bean id="john" class="edu.miu.cs.cs544.najeeb.midterm.entity.Student">
+        <constructor-arg value="John"/>
+        <constructor-arg value="28"/>
+    </bean>
+    <bean id="jill" class="edu.miu.cs.cs544.najeeb.midterm.entity.Student">
+        <constructor-arg value="Jill"/>
+        <constructor-arg value="35"/>
+    </bean>
+    <bean id="jim" class="edu.miu.cs.cs544.najeeb.midterm.entity.Student">
+        <constructor-arg value="Jim"/>
+        <constructor-arg value="25"/>
+    </bean>
+
+</beans>
